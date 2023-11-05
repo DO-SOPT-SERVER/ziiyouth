@@ -1,6 +1,7 @@
 package com.server.sopt.seminar.controller;
 
 import com.server.sopt.seminar.request.post.PostCreateRequest;
+import com.server.sopt.seminar.request.post.PostUpdateRequest;
 import com.server.sopt.seminar.response.post.PostGetResponse;
 import com.server.sopt.seminar.service.PostService;
 import lombok.RequiredArgsConstructor;
@@ -43,8 +44,23 @@ public class PostController {
         return ResponseEntity.ok(postService.getPosts(memberId));
     }
 
+    /**
+     * 게시글 수정 API
+     */
+    @PatchMapping("{postId}")
+    public ResponseEntity<Void> updatePost(@PathVariable Long postId, @RequestBody PostUpdateRequest request){
+        postService.editContent(postId, request);
+        return ResponseEntity.noContent().build();
+    }
 
 
-
+    /**
+     * 게시글 삭제 API
+     */
+    @DeleteMapping("{postId}")
+    public ResponseEntity<Void> deletePost(@PathVariable Long postId) {
+        postService.deleteById(postId);
+        return ResponseEntity.noContent().build();
+    }
 
 }

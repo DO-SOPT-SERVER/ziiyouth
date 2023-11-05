@@ -5,6 +5,7 @@ import com.server.sopt.seminar.domain.Post;
 import com.server.sopt.seminar.repository.MemberRepository;
 import com.server.sopt.seminar.repository.PostRepository;
 import com.server.sopt.seminar.request.post.PostCreateRequest;
+import com.server.sopt.seminar.request.post.PostUpdateRequest;
 import com.server.sopt.seminar.response.post.PostGetResponse;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -46,5 +47,18 @@ public class PostService {
                 .toList();
     }
 
+    @Transactional
+    public void editContent(Long postId, PostUpdateRequest request) {
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new EntityNotFoundException("해당하는 게시글이 없습니다."));
+        post.updateContent(request.content());
+    }
+
+    @Transactional
+    public void deleteById(Long postId) {
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new EntityNotFoundException("해당하는 게시글이 없습니다."));
+        postRepository.delete(post);
+    }
 
 }
