@@ -9,10 +9,10 @@
 ### 📚 SERVER 파트 커리큘럼 📚
 | 주차 | 주제 | 이슈 | 바로가기 |
 |:----------|:----------:|:----:|:----:|
-| 1️⃣ | JAVA, Spring 기초 | [#1]() | [1주차 과제]()|
-| 2️⃣ | Database와 JPA 기초 | | [2주차 과제]() |
-| 3️⃣ | JPA 기반의 CRUD API 설계 | | [3주차 과제]() |
-| 4️⃣ | AWS를 이용한 배포 | | [4주차 과제]() |
+| 1️⃣ | JAVA, Spring 기초 | [#1](https://github.com/DO-SOPT-SERVER/ziiyouth/issues/1) | [1주차 과제](https://github.com/DO-SOPT-SERVER/ziiyouth/pull/2)|
+| 2️⃣ | Database와 JPA 기초 | [#3](https://github.com/DO-SOPT-SERVER/ziiyouth/issues/3) | [2주차 과제](https://github.com/DO-SOPT-SERVER/ziiyouth/pull/4) |
+| 3️⃣ | JPA 기반의 CRUD API 설계 | [#5](https://github.com/DO-SOPT-SERVER/ziiyouth/issues/5) | [3주차 과제](https://github.com/DO-SOPT-SERVER/ziiyouth/pull/6) |
+| 4️⃣ | AWS를 이용한 배포 | [#7](https://github.com/DO-SOPT-SERVER/ziiyouth/issues/7) | [4주차 과제]() |
 | 5️⃣ | 클.디.서 합동 세미나 | | |
 | 6️⃣ | 인증/인가, Multipart 통신 with S3 | | |
 | 7️⃣ | 견고한 서버 설계 (예외처리, QueryDSL 등) | | |
